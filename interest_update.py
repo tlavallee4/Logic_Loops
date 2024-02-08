@@ -14,3 +14,18 @@ with open("account_balances.txt", "r") as file:
     
 print(data)
 pprint(data)
+
+
+# in data: 
+ #   print(data)
+  
+  #if balance > 0 and key < 1000: 
+    #if  data[key] > 0 and data[key] < 1000:
+        #interest = .01
+    #elif data[key] >= 1000 and data[key] < 5000:
+        #interest = .025
+    #elif data[key] >= 5000:
+        #interest = .05
+    #elif data[key] < 0:
+        #interest = .10
+
