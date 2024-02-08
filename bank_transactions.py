@@ -9,6 +9,10 @@ Date: 02/01/2024
 # Define interface
 
 import random 
+import os
+from time import sleep
+sleep(3)
+os.system('cls' if os.name == 'nt' else 'clear')
 D = "Deposit"
 W = "Withdraw"
 Q = "Quit"
@@ -88,5 +92,6 @@ else:
     + centered_invalid_line + "\n"
     + line
     )
+
 
     
