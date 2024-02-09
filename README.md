@@ -12,3 +12,5 @@ In this assignment we will be learning how to use logic and loops. This is learn
 ## Bank Transaction
 In the bank_transactions.py file I will be updating it to simulate an ATM input/output for the user to deposit and withdraw transactions 
 
+## Interest Update 
+In the interest_update.py file I will be updating it to apply interest to multiple customers accounts based on their current balance to grow interest over time 
