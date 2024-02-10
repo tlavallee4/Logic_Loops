@@ -15,6 +15,8 @@ selection = {"D", "W", "Q"}
 D = "Deposit"
 W = "Withdraw"
 Q = "Quit"
+
+# outputting a random balance for ATM transaction
 balance = random.randint(-1000,10000)
 
 # Creating the interface display
@@ -34,6 +36,7 @@ centered_line_5 = line_5.center(width, fill_space)
 line_6 = 'Quit: Q'
 centered_line_6 = line_6.center(width, fill_space)
 
+# printing interface display
 while True:
     print(line + "\n"
     + centered_line_1 + "\n" 
@@ -47,16 +50,18 @@ while True:
     )
 
 # Incorporate Transactions 
+# prompting user for input, capitalized or not
     selection = input("Enter your selection: ")
     capitalized_selection = selection.capitalize()
 
-# Defining invalid lines
+# creating invalid/insufficient lines
     invalid_line = 'INVALID SELECTION'
     insufficient_line = 'INSUFFICIENT FUNDS'
     centered_invalid_line = invalid_line.center(width, fill_space)
     centered_insufficient_line = insufficient_line.center(width, fill_space)
 
 # Creating ATM transaction selections D, W, Q
+# adding current balance with deposit
     if capitalized_selection == 'D':
         transaction = float(input("Enter your amount of transaction: "))
         current_balance = transaction + balance
@@ -68,6 +73,7 @@ while True:
         sleep(3)
         os.system('cls' if os.name == 'nt' else 'clear')
         continue
+# adding current balance or insufficient funds with withdrawl
     elif capitalized_selection == 'W':
         transaction = float(input("Enter your amount of transaction: "))
         if transaction > balance : 
@@ -87,6 +93,7 @@ while True:
             sleep(3)
             os.system('cls' if os.name == 'nt' else 'clear')
             continue
+# adding a quit option to break loop
     elif capitalized_selection == "Q":
         centered_quit_line = Q.center(width, fill_space)
         print(line + "\n"
@@ -95,6 +102,7 @@ while True:
         sleep(3)
         os.system('cls' if os.name == 'nt' else 'clear')
         break
+# adding an invalid output
     else: 
         print(line + "\n"
         + centered_invalid_line + "\n"
